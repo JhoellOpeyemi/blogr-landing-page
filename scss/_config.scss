@@ -1,0 +1,22 @@
+$white: hsl(0, 0%, 100%);
+$intro-gradient: linear-gradient(
+	to right,
+	hsl(13, 100%, 72%),
+	hsl(353, 100%, 62%)
+);
+
+$cta-text-color: hsl(356, 100%, 66%);
+$cta-hover-bg: hsl(355, 100%, 74%);
+$headings-color: hsl(208, 49%, 24%);
+$body-copy: hsl(207, 13%, 34%);
+
+$bg-gradient: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+
+$footer-text-color: hsl(240, 2%, 79%);
+$footer-bg: hsl(240, 10%, 16%);
+
+$transition-delay: 0.4s;
+
+$font-size: 1rem;
+$font-overpass: 'Overpass', sans-serif;
+$font-ubuntu: 'Ubuntu', sans-serif;
