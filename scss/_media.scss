@@ -60,7 +60,7 @@
 		background: $intro-gradient;
 		border-radius: 7px;
 		padding: 5rem 0 5rem 0;
-		transform: translateX(150%);
+		transform: translateY(-150%);
 		transition: all $transition-delay;
 		box-shadow: 5px 10px 30px rgba($color: #000, $alpha: 0.2);
 		z-index: 2;
@@ -180,7 +180,7 @@
 	header {
 		&::after {
 			right: -130%;
-			width: 250%;
+			width: 300%;
 		}
 
 		.header {
@@ -208,7 +208,7 @@
 			.main {
 				.main-content {
 					&-header {
-						font-size: 2.9rem;
+						font-size: 3.5rem;
 						text-align: center;
 					}
 
@@ -371,43 +371,49 @@
 }
 
 @media screen and (max-width: 500px) {
+	.mobile-nav {
+		.dropdowns {
+			.product,
+			.company,
+			.connect {
+				a.dropdown-header {
+					font-size: 1.3rem;
+
+					span {
+						img {
+							width: 140%;
+						}
+					}
+				}
+
+				.dropdown-menu {
+					transform: translateX(-28%);
+
+					a {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+
+		.accounts-cta {
+			button {
+				font-size: 1.1rem;
+			}
+		}
+	}
+
 	header {
 		&::after {
-			right: -150%;
-			width: 260%;
+			right: -130%;
+			width: 300%;
 		}
 
 		.header {
 			nav {
-				.mobile-nav {
-					.dropdowns {
-						.product,
-						.company,
-						.connect {
-							a.dropdown-header {
-								font-size: 1.3rem;
-
-								span {
-									img {
-										width: 140%;
-									}
-								}
-							}
-
-							.dropdown-menu {
-								transform: translateX(-28%);
-
-								a {
-									font-size: 1rem;
-								}
-							}
-						}
-					}
-
-					.accounts-cta {
-						button {
-							font-size: 1.1rem;
-						}
+				.logo-container {
+					img {
+						width: 70%;
 					}
 				}
 			}
@@ -415,7 +421,7 @@
 			.main {
 				.main-content {
 					&-header {
-						font-size: 2.1rem;
+						font-size: 2.3rem;
 						text-align: center;
 					}
 

@@ -98,7 +98,7 @@ header {
 	min-height: 80vh;
 	border-radius: 0 0 0 102px;
 	z-index: 1;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	&::after {
 		content: '';
