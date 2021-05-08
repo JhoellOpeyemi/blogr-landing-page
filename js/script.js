@@ -1,6 +1,6 @@
 const dropdowns = document.querySelector('.dropdowns');
 const accountCta = document.querySelector('.accounts-cta');
-const nav = document.querySelector('nav');
+const body = document.querySelector('body');
 const hamburger = document.querySelector('.hamburger');
 const hamburgerImg = document.querySelector('.hamburger img');
 
@@ -22,11 +22,7 @@ if (window.matchMedia('(max-device-width: 776px)').matches) {
 	mobileNav.appendChild(accountCta);
 
 	// Append mobile nav to nav
-	nav.appendChild(mobileNav);
-
-	dropdownArrows.forEach((arrow) => {
-		arrow.src = './images/icon-arrow-dark.svg';
-	});
+	body.appendChild(mobileNav);
 
 	// Change images
 	editorImg.src = './images/illustration-editor-mobile.svg';

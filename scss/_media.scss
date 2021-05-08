@@ -46,6 +46,135 @@
 @media screen and (max-width: 776px) {
 	body {
 		background: $white;
+		position: relative;
+	}
+
+	.mobile-nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		position: absolute;
+		top: 5rem;
+		width: 100%;
+		background: $intro-gradient;
+		border-radius: 7px;
+		padding: 5rem 0 5rem 0;
+		transform: translateX(150%);
+		transition: all $transition-delay;
+		box-shadow: 5px 10px 30px rgba($color: #000, $alpha: 0.2);
+		z-index: 2;
+
+		&.active {
+			transform: translateX(0);
+		}
+
+		.dropdowns {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			flex: 0;
+			width: 100%;
+
+			.product,
+			.company,
+			.connect {
+				margin-bottom: 3rem;
+				text-align: center;
+
+				&:hover .dropdown-menu {
+					height: auto;
+					opacity: 1;
+					pointer-events: all;
+				}
+
+				&:hover a.dropdown-header span {
+					transform: rotate(180deg);
+				}
+
+				a.dropdown-header {
+					font-size: 1.7rem;
+					color: $white;
+					transition: all $transition-delay;
+					display: flex;
+
+					span {
+						margin-left: 1rem;
+						transform: rotate(0deg);
+						transition: all $transition-delay;
+
+						img {
+							width: 150%;
+						}
+					}
+
+					&:hover,
+					&:focus {
+						text-decoration: none;
+						color: rgba($color: $white, $alpha: 0.8);
+					}
+				}
+
+				.dropdown-menu {
+					background: rgba($color: $white, $alpha: 0.8);
+					width: 250%;
+					transform: translateX(-33%);
+					padding: 0.7rem 0;
+					border-radius: 6px;
+					position: relative;
+					height: 0;
+					opacity: 0;
+					margin-top: 0;
+					pointer-events: none;
+
+					li {
+						font-size: 1.2rem;
+						color: rgba($color: #000000, $alpha: 0.5);
+						margin-bottom: 1rem;
+						transition: all $transition-delay;
+
+						&:first-child {
+							margin-top: 1.4rem;
+						}
+
+						&:hover,
+						&:focus {
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+
+		.accounts-cta {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border-top: 2px solid rgba($color: $white, $alpha: 0.5);
+			width: 100%;
+			padding-top: 2rem;
+
+			button {
+				font-size: 1.3rem;
+			}
+
+			.login {
+				color: $white;
+				border: none;
+				margin-bottom: 1.4rem;
+
+				&:hover,
+				&:focus {
+					color: $cta-text-color;
+				}
+			}
+
+			.sign-up {
+				background: $white;
+				color: $cta-text-color;
+			}
+		}
 	}
 
 	header {
@@ -59,129 +188,10 @@
 				position: relative;
 				justify-content: space-between;
 				align-items: center;
+				padding-top: 1.8rem;
 
 				.logo-container {
 					margin-right: 3rem;
-				}
-
-				.mobile-nav {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					flex-direction: column;
-					position: absolute;
-					top: 8rem;
-					width: 100%;
-					min-height: 80vh;
-					background: $white;
-					border-radius: 7px;
-					padding: 3rem;
-					transform: translateX(150%);
-					transition: all $transition-delay;
-					box-shadow: 5px 10px 30px rgba($color: #000, $alpha: 0.2);
-
-					.dropdowns {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						justify-content: center;
-						flex: 0;
-						width: 100%;
-
-						.product,
-						.company,
-						.connect {
-							margin-bottom: 3rem;
-							text-align: center;
-
-							&:hover .dropdown-menu {
-								height: auto;
-								opacity: 1;
-							}
-
-							a.dropdown-header {
-								font-size: 1.7rem;
-								color: $headings-color;
-								transition: all $transition-delay;
-
-								span {
-									margin-left: 1rem;
-									transition: all $transition-delay;
-
-									img {
-										width: 150%;
-									}
-								}
-
-								&:hover,
-								&:focus {
-									text-decoration: none;
-									color: rgba($color: $headings-color, $alpha: 0.8);
-								}
-							}
-
-							.dropdown-menu {
-								background: rgba($color: #000, $alpha: 0.05);
-								width: 200%;
-								transform: translateX(-25%);
-								padding: 0;
-								border-radius: 6px;
-								position: relative;
-								height: 0;
-								opacity: 0;
-								margin-top: 0.5rem;
-
-								a {
-									font-size: 1.2rem;
-									color: rgba($color: #000000, $alpha: 0.5);
-									margin-bottom: 1.4rem;
-									transition: all $transition-delay;
-
-									&.first-child {
-										margin-top: 1.4rem;
-									}
-
-									&:hover,
-									&:focus {
-										color: #000;
-									}
-								}
-							}
-						}
-					}
-
-					.accounts-cta {
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						border-top: 2px solid rgba($color: #000, $alpha: 0.05);
-						width: 100%;
-						padding-top: 2rem;
-
-						button {
-							font-size: 1.3rem;
-						}
-
-						.login {
-							color: $body-copy;
-							border: none;
-							margin-bottom: 1.4rem;
-
-							&:hover,
-							&:focus {
-								color: $cta-text-color;
-							}
-						}
-
-						.sign-up {
-							background: $intro-gradient;
-							color: $white;
-						}
-					}
-				}
-
-				.mobile-nav.active {
-					transform: translateX(0);
 				}
 
 				.hamburger {

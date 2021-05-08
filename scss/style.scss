@@ -98,6 +98,7 @@ header {
 	min-height: 80vh;
 	border-radius: 0 0 0 102px;
 	z-index: 1;
+	overflow-x: hidden;
 
 	&::after {
 		content: '';
@@ -206,6 +207,7 @@ header {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			margin-top: 2rem;
 
 			.main-content {
 				color: $white;
@@ -227,7 +229,11 @@ header {
 					text-align: center;
 
 					button {
-						margin-right: 1rem;
+						margin-bottom: 0.8rem;
+					}
+
+					button:first-child {
+						margin-right: 0.3rem;
 					}
 				}
 			}
